@@ -29,7 +29,7 @@ fi
 TMP="$(mktemp -d)"
 trap 'rm -rf "${TMP}"' EXIT
 
-find "${DIR}" -type d -name 'v3*' | xargs rm -rf
+find "${DIR}" -type d -name 'v*' | xargs rm -rf
 pushd "${TMP}" >/dev/null
 for tag in $(list-proto3-stable-release-tags-with-wkt); do
   mkdir -p "${tag}"

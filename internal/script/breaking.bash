@@ -20,7 +20,7 @@ check_command_installed() {
 
 check_command_installed buf
 
-ls | grep ^v3 | sort-semver-tags | list-pairs | xargs  printf -- 'breaking --against %s %s\n' | while read line; do
+ls | grep ^v | sort-semver-tags | list-pairs | xargs  printf -- 'breaking --against %s %s\n' | while read line; do
   IFS=' ' read -r -a args <<< "${line}"
   echo buf "${args[@]}"
   buf "${args[@]}" || true

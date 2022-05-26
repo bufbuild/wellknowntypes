@@ -2,7 +2,7 @@ SHELL := /usr/bin/env bash -o pipefail
 
 PROJECT := wellknowntypes
 GO_MODULE := github.com/bufbuild/wellknowntypes
-BUF_VERSION := 1.0.0-rc11
+BUF_VERSION := 1.4.0
 
 UNAME_OS := $(shell uname -s)
 UNAME_ARCH := $(shell uname -m)
